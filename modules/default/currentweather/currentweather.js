@@ -204,6 +204,7 @@ Module.register("currentweather",{
 		large.appendChild(temperature);
 
 		wrapper.appendChild(large);
+		this.hide();
 		return wrapper;
 	},
 

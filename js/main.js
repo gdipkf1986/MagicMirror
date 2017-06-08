@@ -85,6 +85,7 @@ var MM = (function() {
 			var module = modules[m];
 			if (module !== sender) {
 				module.notificationReceived(notification, payload, sender);
+				module.afterNotificationReceived(notification, payload, sender);
 			}
 		}
 	};
@@ -96,6 +97,7 @@ var MM = (function() {
 	 * argument speed Number - The number of microseconds for the animation. (optional)
 	 */
 	var updateDom = function(module, speed) {
+
 		var newContent = module.getDom();
 		var newHeader = module.getHeader();
 
@@ -119,6 +121,7 @@ var MM = (function() {
 		} else {
 			updateModuleContent(module, newHeader, newContent);
 		}
+		module.afterGetDom();
 	};
 
 	/* moduleNeedsUpdate(module, newContent)

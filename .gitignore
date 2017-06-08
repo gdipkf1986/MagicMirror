@@ -1,5 +1,5 @@
 # Various Node ignoramuses.
-
+.idea
 logs
 *.log
 npm-debug.log*
@@ -11,7 +11,7 @@ coverage
 .grunt
 .lock-wscript
 build/Release
-node_modules
+node_modules/
 jspm_modules
 .npm
 .node_repl_history
@@ -58,7 +58,6 @@ Temporary Items
 !/modules/node_helper/**
 
 # Ignore all modules except the default modules.
-/modules/**
 !/modules/default
 !/modules/default/**
 !/modules/README.md**
